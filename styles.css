@@ -1,5 +1,5 @@
 .grid-container {
-  width: 90vw;
+  width: 70vw;
   height: 90vh;
   display: flex;
   margin: 10px;
@@ -14,8 +14,8 @@
 }
 .card-container {
   perspective: 1000px;
-  width: 100px; /* Adjust width as needed */
-  height: 143px; /* Maintain aspect ratio of 3059x4398 */
+  width: 100px;
+  height: 400px;
   flex: 1 0 30%;
   display: flex;
   align-items: center;
@@ -110,8 +110,8 @@
   transform: rotateY(180deg);
 }
 .card.is-expanded {
-  width: 75vw; /* 75% of the viewport width */
-  height: calc(75vw * 4398 / 3059); /* Maintain aspect ratio */
+  width: 75vw;
+  height: calc(75vw * 4398 / 3059);
   position: fixed;
   top: 50%;
   left: 50%;

@@ -67,65 +67,65 @@ body {
 }
 
 .card-front.card1 {
-  background-image: url("/images/shaper_front.png");
+  background-image: url("https://i.postimg.cc/85gKqzRL/shaper-front.png");
 }
 
 .card-back.card1 {
-  background-image: url("/images/shaper_back.png");
+  background-image: url("https://i.postimg.cc/zGMPFj3t/shaper-back.png");
   transform: rotateY(180deg);
 }
 
 .card-front.card2 {
-  background-image: url("/images/implementer_front.png");
+  background-image: url("https://i.postimg.cc/D0FNbwm7/implementer-front.png");
 }
 
 .card-back.card2 {
-  background-image: url("/images/implementer_back.png");
+  background-image: url("https://i.postimg.cc/pdw4RZHh/implementer-back.png");
   transform: rotateY(180deg);
 }
 
 .card-front.card3 {
-  background-image: url("/images/completer_front.png");
+  background-image: url("https://i.postimg.cc/MGMNCLhJ/completer-front.png");
 }
 
 .card-back.card3 {
-  background-image: url("/images/completer_back.png");
+  background-image: url("https://i.postimg.cc/GmpZQtK2/completer-back.png");
   transform: rotateY(180deg);
 }
 
 .card-front.card4 {
-  background-image: url("/images/plant_front.png");
+  background-image: url("https://i.postimg.cc/L8hbP74g/plant-front.png");
 }
 
 .card-back.card4 {
-  background-image: url("/images/plant_back.png");
+  background-image: url("https://i.postimg.cc/ZYF2zpDn/plant-back.png");
   transform: rotateY(180deg);
 }
 
 .card-front.card5 {
-  background-image: url("/images/monitor-evaluator_front-09.png");
+  background-image: url("https://i.postimg.cc/SRrvLbzC/monitor-evaluator-front-09.png");
 }
 
 .card-back.card5 {
-  background-image: url("/images/monitor-evaluator_back.png");
+  background-image: url("https://i.postimg.cc/m2LqLk0w/monitor-evaluator-back.png");
   transform: rotateY(180deg);
 }
 
 .card-front.card6 {
-  background-image: url("images/specialist_front.png");
+  background-image: url("https://i.postimg.cc/QC0f9gRq/specialist-front.png");
 }
 
 .card-back.card6 {
-  background-image: url("images/specialist_back-16.png");
+  background-image: url("https://i.postimg.cc/Jn36mCxv/specialist-back-16.png");
   transform: rotateY(180deg);
 }
 
 .card-front.card7 {
-  background-image: url("images/resource-invest_front.png");
+  background-image: url("https://i.postimg.cc/rFfHKcTL/resource-invest-front.png");
 }
 
 .card-back.card7 {
-  background-image: url("images/resource-invest_back-06.png");
+  background-image: url("https://i.postimg.cc/7L2ts22x/resource-invest-back-06.png");
   transform: rotateY(180deg);
 }
 
@@ -139,11 +139,11 @@ body {
 }
 
 .card-front.card9 {
-  background-image: url("images/coordinator_front.png");
+  background-image: url("https://i.postimg.cc/2SXgXY9x/coordinator-front.png");
 }
 
 .card-back.card9 {
-  background-image: url("images/coordinator_back.png");
+  background-image: url("https://i.postimg.cc/sX58Xhjn/coordinator-back.png");
   transform: rotateY(180deg);
 }
 

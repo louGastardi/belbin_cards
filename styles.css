@@ -13,17 +13,17 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping to multiple rows */
     justify-content: center;
-    align-items: center;
     gap: 20px;
-    max-width: 80vw; /* Adjust as necessary */
+    width: 90vw; /* Adjusted width to accommodate 3 cards per row */
+    max-width: 1000px; /* Ensure it fits within most screen sizes */
 }
 
 .card {
-    width: 30vw;
+    width: 28vw; /* Ensure that three cards fit within the container */
     height: 30vh;
     perspective: 1000px;
-    flex: 0 0 auto; 
     position: relative;
+    flex: 1 0 28%; /* Allow cards to take equal space and wrap correctly */
 }
 
 .card-inner {
@@ -92,7 +92,7 @@ body {
         align-items: center;
         gap: 10px;
     }
-    .card{
+    .card {
         width: 80vw;
         height: 50vh;
     }
@@ -102,3 +102,4 @@ body {
     .card.full-screen {
         width: 90vw;
     }
+}

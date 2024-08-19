@@ -1,168 +1,104 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
-.grid-container {
-  width: 90vw;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
 .card-container {
-  perspective: 1000px;
-  flex: 1 0 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to multiple rows */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 80vw; /* Adjust as necessary */
 }
 
 .card {
-  width: 100%;
-  height: 100%;
-  max-width: calc(90vh / 3 * 3059 / 4398);
-  max-height: calc(90vh / 3);
-  transform-style: preserve-3d;
-  transition:
-    transform 0.6s,
-    width 0.6s,
-    height 0.6s;
-  cursor: pointer;
+    width: 30vw;
+    height: 30vh;
+    perspective: 1000px;
+    flex: 0 0 auto; 
+    position: relative;
 }
 
-.card.is-flipped {
-  transform: rotateY(180deg);
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: contain; /* Changed from cover to contain */
-  background-position: center;
-  background-repeat: no-repeat; /* Ensure background image does not repeat */
-  background-clip: padding-box; /* Add this to ensure no repeating issues */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.card-front.card1 {
-  background-image: url("https://i.postimg.cc/85gKqzRL/shaper-front.png");
+.card-front {
+    background-color: transparent;
+    color: #000;
 }
 
-.card-back.card1 {
-  background-image: url("https://i.postimg.cc/zGMPFj3t/shaper-back.png");
-  transform: rotateY(180deg);
+.card-front img, .card-back img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
-.card-front.card2 {
-  background-image: url("https://i.postimg.cc/D0FNbwm7/implementer-front.png");
+.card-back {
+    transform: rotateY(180deg);
 }
 
-.card-back.card2 {
-  background-image: url("https://i.postimg.cc/pdw4RZHh/implementer-back.png");
-  transform: rotateY(180deg);
+.card.flip .card-inner {
+    transform: rotateY(180deg);
 }
 
-.card-front.card3 {
-  background-image: url("https://i.postimg.cc/MGMNCLhJ/completer-front.png");
-}
-
-.card-back.card3 {
-  background-image: url("https://i.postimg.cc/GmpZQtK2/completer-back.png");
-  transform: rotateY(180deg);
-}
-
-.card-front.card4 {
-  background-image: url("https://i.postimg.cc/L8hbP74g/plant-front.png");
-}
-
-.card-back.card4 {
-  background-image: url("https://i.postimg.cc/ZYF2zpDn/plant-back.png");
-  transform: rotateY(180deg);
-}
-
-.card-front.card5 {
-  background-image: url("https://i.postimg.cc/SRrvLbzC/monitor-evaluator-front-09.png");
-}
-
-.card-back.card5 {
-  background-image: url("https://i.postimg.cc/m2LqLk0w/monitor-evaluator-back.png");
-  transform: rotateY(180deg);
-}
-
-.card-front.card6 {
-  background-image: url("https://i.postimg.cc/QC0f9gRq/specialist-front.png");
-}
-
-.card-back.card6 {
-  background-image: url("https://i.postimg.cc/Jn36mCxv/specialist-back-16.png");
-  transform: rotateY(180deg);
-}
-
-.card-front.card7 {
-  background-image: url("https://i.postimg.cc/rFfHKcTL/resource-invest-front.png");
-}
-
-.card-back.card7 {
-  background-image: url("https://i.postimg.cc/7L2ts22x/resource-invest-back-06.png");
-  transform: rotateY(180deg);
-}
-
-.card-front.card8 {
-  background-image: url("images/teamworker_front-17.png");
-}
-
-.card-back.card8 {
-  background-image: url("images/teamworker_back.png");
-  transform: rotateY(180deg);
-}
-
-.card-front.card9 {
-  background-image: url("https://i.postimg.cc/2SXgXY9x/coordinator-front.png");
-}
-
-.card-back.card9 {
-  background-image: url("https://i.postimg.cc/sX58Xhjn/coordinator-back.png");
-  transform: rotateY(180deg);
-}
-
-.card.is-expanded {
-  width: auto; /* Auto width to allow height adjustment */
-  height: auto; /* Auto height to allow height adjustment */
-  min-width: calc(
-    600px * 3059 / 4398
-  ); /* Calculate minimum width to maintain aspect ratio */
-  min-height: 600px; /* Ensure minimum height of 400px */
-  max-width: 90vw; /* Ensure the card does not exceed 90% of the viewport width */
-  max-height: 90vh; /* Ensure the card does not exceed 90% of the viewport height */
-  position: absolute; /* Absolute positioning */
-  top: 150%;
-  left: 150%;
-  transform: translate(-50%, -50%) rotateY(180deg); /* Center on the screen and flip */
-  z-index: 10;
+.card.full-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    height: 70vh;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
+
+@media (max-width: 786px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .card{
+        width: 80vw;
+        height: 50vh;
+    }
+    #card1:not(.flip) {
+        margin-top: 100vh;
+    }
+    .card.full-screen {
+        width: 90vw;
+    }

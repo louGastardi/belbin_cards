@@ -22,7 +22,7 @@ body {
 }
 
 .card {
-    width: calc(33.333% - 10px);
+    width: calc(100vw / 3);
     height: calc(100vh / 3 - 10px);
     max-width: 500px;
     perspective: 1000px;

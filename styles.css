@@ -22,7 +22,7 @@ body {
 }
 
 .card {
-    width: calc(100vw / 3 - 10px);
+    width: calc(33.333% - 10px);
     height: calc(100vh / 3 - 10px);
     max-width: 500px;
     perspective: 1000px;
@@ -58,8 +58,6 @@ body {
 .card-front {
     background-color: transparent;
     color: #000;
-    transform: scale(1.15); 
-    transition: transform 0.8s;
 }
 
 .card-front img, .card-back img {
